@@ -1,6 +1,6 @@
 package desafiocriptografiajuliocesar.http.urisuporte;
 
-public final class URIConstantesSuporte {
+final class URIConstantesSuporte {
 
     private URIConstantesSuporte() {
     }

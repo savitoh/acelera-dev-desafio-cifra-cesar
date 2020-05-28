@@ -7,6 +7,6 @@ class URIApiCodeNationRecebeTextoCriptografado extends URIApiCodeNationBase impl
     @Override
     public String getURI() {
         final String uriBaseComParametroToken = getBaseURIComParametroToken();
-        return uriBaseComParametroToken.replace("{PATH}", PATH_GENERATE_DATA);
+        return uriBaseComParametroToken.replace(URIConstantesSuporte.SIMBOLO_DELIMITADOR_PATH_URI, PATH_GENERATE_DATA);
     }
 }
