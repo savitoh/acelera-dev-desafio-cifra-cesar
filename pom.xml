@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.savitoh</groupId>
-    <artifactId>acelera-dev-desafio-cifra -cesar</artifactId>
+    <artifactId>acelera-dev-desafio-criptografia-julio-cesar</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -38,6 +38,19 @@
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>desafiocriptografiajuliocesar.DesafioCriptografiaJulioCesar</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
 
                 <!-- Need at least 2.22.0 to support JUnit 5 -->
                 <plugin>
