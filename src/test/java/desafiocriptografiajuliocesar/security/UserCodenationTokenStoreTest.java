@@ -31,7 +31,7 @@ public class UserCodenationTokenStoreTest {
         Optional<String> userCodenationToken = UserCodenationTokenStore.getToken();
 
         assertTrue(userCodenationToken.isPresent());
-        assertEquals(UserCodenationTokenStore.getToken().get(), "fail-value");
+        assertEquals( "fail-value", UserCodenationTokenStore.getToken().get());
     }
 
     private void setPropertyUserCodenationTokenUser() {
