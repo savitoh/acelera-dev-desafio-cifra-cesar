@@ -1,6 +1,5 @@
 package desafiocriptografiajuliocesar.security;
 
-import desafiocriptografiajuliocesar.security.UserCodenationTokenStore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
