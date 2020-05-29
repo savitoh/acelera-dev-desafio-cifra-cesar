@@ -35,7 +35,7 @@ Acesse a pasta root do projeto, onde o arquivo pom.xml estar localizado:
    mvn clean package  - (Empacota a APP em um .jar)
 ```
 
-2. Rode o .jar com o comando abaixo. <b>Atenção para propriedade<b>: user-codenation-token. Troque por um valor válido
+2. Rode o .jar com o comando abaixo. **Atenção para propriedade: user-codenation-token. Troque por um valor válido**
  
 ```
    java -jar -Duser-codenation-token={tokenValue} target/acelera-dev-desafio-criptografia-julio-cesar-1.0-SNAPSHOT.jar
