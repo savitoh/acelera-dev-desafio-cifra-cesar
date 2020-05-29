@@ -1,23 +1,22 @@
 package desafiocriptografiajuliocesar.http.urisuporte;
 
-import desafiocriptografiajuliocesar.http.urisuporte.URIApiCodeNationEnviaTextoDecifrado;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class URIApiCodeNationEnviaTextoDecifradoTest {
+public class URIApiCodeNationEnviaDesafioDecifradoTest {
 
     private static final String USER_CODENATION_TOKEN_PROPERTY_NAME = "user-codenation-token";
 
     private static final String USER_CODENATION_TOKEN_PROPERTY_VALUE = "123456";
 
-    private URIApiCodeNationEnviaTextoDecifrado uriEnviaTextoDecifrado;
+    private URIApiCodeNationEnviaDesafioDecifrado uriEnviaTextoDecifrado;
 
     @BeforeEach
     void setUp() {
-        uriEnviaTextoDecifrado = new URIApiCodeNationEnviaTextoDecifrado();
+        uriEnviaTextoDecifrado = new URIApiCodeNationEnviaDesafioDecifrado();
         System.clearProperty(USER_CODENATION_TOKEN_PROPERTY_NAME);
     }
 

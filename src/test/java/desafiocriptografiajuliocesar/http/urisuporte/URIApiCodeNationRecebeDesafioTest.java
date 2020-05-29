@@ -1,23 +1,22 @@
 package desafiocriptografiajuliocesar.http.urisuporte;
 
-import desafiocriptografiajuliocesar.http.urisuporte.URIApiCodeNationRecebeTextoCriptografado;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class URIApiCodeNationRecebeTextoCriptografadoTest {
+public class URIApiCodeNationRecebeDesafioTest {
 
     private static final String USER_CODENATION_TOKEN_PROPERTY_NAME = "user-codenation-token";
 
     private static final String USER_CODENATION_TOKEN_PROPERTY_VALUE = "123456";
 
-    private URIApiCodeNationRecebeTextoCriptografado uriRecebeTextoCriptografado;
+    private URIApiCodeNationRecebeDesafio uriRecebeTextoCriptografado;
 
     @BeforeEach
     void setUp() {
-        uriRecebeTextoCriptografado = new URIApiCodeNationRecebeTextoCriptografado();
+        uriRecebeTextoCriptografado = new URIApiCodeNationRecebeDesafio();
         System.clearProperty(USER_CODENATION_TOKEN_PROPERTY_NAME);
     }
 

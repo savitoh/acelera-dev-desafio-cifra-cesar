@@ -1,6 +1,6 @@
 package desafiocriptografiajuliocesar.http.urisuporte;
 
-class URIApiCodeNationRecebeTextoCriptografado extends URIApiCodeNationBase implements URIApiCodeNation {
+public class URIApiCodeNationRecebeDesafio extends URIApiCodeNationBase implements URIApiCodeNation {
 
     private static final String PATH_GENERATE_DATA = "/generate-data";
 
