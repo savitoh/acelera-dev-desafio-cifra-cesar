@@ -46,7 +46,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>desafiocriptografiajuliocesar.DesafioCriptografiaJulioCesar</mainClass>
+                                <mainClass>desafiocriptografiajuliocesar.App</mainClass>
                             </manifest>
                         </archive>
                     </configuration>

@@ -2,7 +2,7 @@ package desafiocriptografiajuliocesar;
 
 import org.junit.jupiter.api.Test;
 
-public class DesafioCriptografiaJulioCesarTest {
+public class AppTest {
 
     @Test
     void test() {
