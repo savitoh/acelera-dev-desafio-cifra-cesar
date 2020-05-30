@@ -18,6 +18,23 @@ public class CriptografiaJulioCesarPayload {
     @JsonProperty("resumo_criptografico")
     private String resumoCriptografado;
 
+    /**
+     * @deprecated Usado apenas pelo Jackson para realizar Desserialização
+    */
+    @Deprecated(since = "30/05/2020")
+    public CriptografiaJulioCesarPayload() {
+    }
+
+    public CriptografiaJulioCesarPayload(int numeroCasas, String token,
+                                         String cifrado, String decifrado,
+                                         String resumoCriptografado) {
+        this.numeroCasas = numeroCasas;
+        this.token = token;
+        this.cifrado = cifrado;
+        this.decifrado = decifrado;
+        this.resumoCriptografado = resumoCriptografado;
+    }
+
     public int getNumeroCasas() {
         return numeroCasas;
     }
@@ -36,26 +53,6 @@ public class CriptografiaJulioCesarPayload {
 
     public String getResumoCriptografado() {
         return resumoCriptografado;
-    }
-
-    public void setNumeroCasas(int numeroCasas) {
-        this.numeroCasas = numeroCasas;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public void setCifrado(String cifrado) {
-        this.cifrado = cifrado;
-    }
-
-    public void setDecifrado(String decifrado) {
-        this.decifrado = decifrado;
-    }
-
-    public void setResumoCriptografado(String resumoCriptografado) {
-        this.resumoCriptografado = resumoCriptografado;
     }
 
     public String retonarFormatoJson() throws JsonProcessingException {
