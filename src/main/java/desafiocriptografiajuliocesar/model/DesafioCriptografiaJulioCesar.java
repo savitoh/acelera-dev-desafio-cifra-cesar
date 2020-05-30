@@ -30,7 +30,7 @@ public class DesafioCriptografiaJulioCesar {
     @Override
     public String toString() {
         return "DesafioCriptografiaJulioCesar{" +
-                "criptografiaJulioCesarPayload=" + criptografiaJulioCesarPayload +
+                "criptografiaJulioCesarPayload=" + criptografiaJulioCesarPayload.toString() +
                 '}';
     }
 }
