@@ -1,15 +1,19 @@
 package desafiocriptografiajuliocesar;
 
-import desafiocriptografiajuliocesar.http.CodeNationApiClient;
+import desafiocriptografiajuliocesar.model.DesafioCriptografiaJulioCesar;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class App {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-        CodeNationApiClient codeNationApiClient = new CodeNationApiClient();
+    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
-        codeNationApiClient.recebeDesafio();
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+        DesafioCriptografiaJulioCesar desafioCriptografiaJulioCesar = DesafioCriptografiaJulioCesar.create();
+        desafioCriptografiaJulioCesar.salvarDesafioArquivoJSON();
+
     }
 
 }
