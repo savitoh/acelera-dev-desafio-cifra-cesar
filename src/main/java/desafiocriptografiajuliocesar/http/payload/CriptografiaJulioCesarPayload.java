@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CriptografiaJulioCesarPayload {
 
     @JsonProperty("numero_casas")
-    private int numeroCasas;
+    private short numeroCasas;
 
     private String token;
 
@@ -25,7 +25,7 @@ public class CriptografiaJulioCesarPayload {
     public CriptografiaJulioCesarPayload() {
     }
 
-    public CriptografiaJulioCesarPayload(int numeroCasas, String token,
+    public CriptografiaJulioCesarPayload(short numeroCasas, String token,
                                          String cifrado, String decifrado,
                                          String resumoCriptografado) {
         this.numeroCasas = numeroCasas;
