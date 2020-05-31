@@ -35,7 +35,7 @@ public class CriptografiaJulioCesarPayload {
         this.resumoCriptografado = resumoCriptografado;
     }
 
-    public int getNumeroCasas() {
+    public short getNumeroCasas() {
         return numeroCasas;
     }
 
