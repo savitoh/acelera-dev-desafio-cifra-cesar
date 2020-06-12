@@ -59,6 +59,10 @@ public class CriptografiaJulioCesarPayload {
         this.decifrado = decifrado;
     }
 
+    public void setResumoCriptografado(String resumoCriptografado) {
+        this.setDecifrado(resumoCriptografado);
+    }
+
     public String retonarFormatoJson() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.writeValueAsString(this);

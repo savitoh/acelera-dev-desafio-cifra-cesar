@@ -2,10 +2,12 @@ package desafiocriptografiajuliocesar.model;
 
 import desafiocriptografiajuliocesar.http.CodeNationApiClient;
 import desafiocriptografiajuliocesar.http.payload.CriptografiaJulioCesarPayload;
+import desafiocriptografiajuliocesar.security.utils.SHA1Util;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -46,5 +48,11 @@ public class DesafioCriptografiaJulioCesar {
                 .collect(Collectors.joining());
         criptografiaJulioCesarPayload.setDecifrado(decifrado);
         return decifrado;
+    }
+
+    public String gerarResumoDecifrado() throws NoSuchAlgorithmException {
+        var hashSha1 = SHA1Util.genarateHash(criptografiaJulioCesarPayload.getDecifrado());
+        criptografiaJulioCesarPayload.setResumoCriptografado(hashSha1);
+        return hashSha1;
     }
 }
