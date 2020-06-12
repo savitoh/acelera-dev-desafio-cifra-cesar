@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CriptografiaJulioCesarPayload {
 
     @JsonProperty("numero_casas")
-    private int numeroCasas;
+    private short numeroCasas;
 
     private String token;
 
@@ -25,7 +25,7 @@ public class CriptografiaJulioCesarPayload {
     public CriptografiaJulioCesarPayload() {
     }
 
-    public CriptografiaJulioCesarPayload(int numeroCasas, String token,
+    public CriptografiaJulioCesarPayload(short numeroCasas, String token,
                                          String cifrado, String decifrado,
                                          String resumoCriptografado) {
         this.numeroCasas = numeroCasas;
@@ -35,7 +35,7 @@ public class CriptografiaJulioCesarPayload {
         this.resumoCriptografado = resumoCriptografado;
     }
 
-    public int getNumeroCasas() {
+    public short getNumeroCasas() {
         return numeroCasas;
     }
 
@@ -53,6 +53,14 @@ public class CriptografiaJulioCesarPayload {
 
     public String getResumoCriptografado() {
         return resumoCriptografado;
+    }
+
+    public void setDecifrado(String decifrado) {
+        this.decifrado = decifrado;
+    }
+
+    public void setResumoCriptografado(String resumoCriptografado) {
+        this.setDecifrado(resumoCriptografado);
     }
 
     public String retonarFormatoJson() throws JsonProcessingException {
