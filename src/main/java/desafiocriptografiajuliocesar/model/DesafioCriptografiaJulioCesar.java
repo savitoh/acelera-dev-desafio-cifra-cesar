@@ -32,14 +32,13 @@ public class DesafioCriptografiaJulioCesar {
 
     public String decifrar() {
         final String cifrado = criptografiaJulioCesarPayload.getCifrado();
-        final short numeroCasas = criptografiaJulioCesarPayload.getNumeroCasas();
         final String decifrado = cifrado.chars()
                 .mapToObj(item -> {
                     char character = (char) item;
                     Optional<Integer> posicaoCharacter = Alfabeto.getPosicao(character);
                     if(posicaoCharacter.isPresent()) {
                         Integer posicaoCifrada = posicaoCharacter.get();
-                        Integer posicaoDecifrada = (posicaoCifrada - numeroCasas) % 26;
+                        Integer posicaoDecifrada = getPosicaoDecifrada(posicaoCifrada);
                         char caracterDecifrado = Alfabeto.getCharacter(posicaoDecifrada.shortValue());
                         return String.valueOf(caracterDecifrado);
                     }
@@ -48,6 +47,14 @@ public class DesafioCriptografiaJulioCesar {
                 .collect(Collectors.joining());
         criptografiaJulioCesarPayload.setDecifrado(decifrado);
         return decifrado;
+    }
+
+    private Integer getPosicaoDecifrada(Integer posicaoCifrada) {
+        final short numeroCasas = criptografiaJulioCesarPayload.getNumeroCasas();
+        final int posicaoDecifrada = ((posicaoCifrada - numeroCasas) % Alfabeto.ULTIMA_POSICAO);
+        if(posicaoDecifrada < 0)
+            return Alfabeto.ULTIMA_POSICAO + posicaoDecifrada;
+        return posicaoDecifrada;
     }
 
     public String gerarResumoDecifrado() throws NoSuchAlgorithmException {

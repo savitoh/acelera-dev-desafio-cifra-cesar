@@ -60,7 +60,7 @@ public class CriptografiaJulioCesarPayload {
     }
 
     public void setResumoCriptografado(String resumoCriptografado) {
-        this.setDecifrado(resumoCriptografado);
+        this.resumoCriptografado = resumoCriptografado;
     }
 
     public String retonarFormatoJson() throws JsonProcessingException {
