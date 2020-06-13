@@ -1,6 +1,6 @@
 package desafiocriptografiajuliocesar.http.urisuporte;
 
-class URIApiCodeNationEnviaDesafioDecifrado extends URIApiCodeNationBase implements URIApiCodeNation {
+public class URIApiCodeNationEnviaDesafioDecifrado extends URIApiCodeNationBase implements URIApiCodeNation {
 
     private static final String PATH_SUBMIT_SOLUTION = "/submit-solution";
 
