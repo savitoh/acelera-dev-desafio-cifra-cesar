@@ -15,6 +15,8 @@ public class App {
         desafioCriptografiaJulioCesar.salvarDesafioArquivoJSON();
         desafioCriptografiaJulioCesar.decifrar();
         desafioCriptografiaJulioCesar.gerarResumoDecifrado();
+        desafioCriptografiaJulioCesar.salvarDesafioArquivoJSON();
+        desafioCriptografiaJulioCesar.enviarDesafio();
     }
 
 }

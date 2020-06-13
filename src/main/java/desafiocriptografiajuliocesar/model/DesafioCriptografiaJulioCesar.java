@@ -6,6 +6,7 @@ import desafiocriptografiajuliocesar.security.utils.SHA1Util;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
@@ -15,9 +16,12 @@ public class DesafioCriptografiaJulioCesar {
 
     private final CriptografiaJulioCesarPayload criptografiaJulioCesarPayload;
 
+    private final CodeNationApiClient codeNationApiClient;
+
     private DesafioCriptografiaJulioCesar(CodeNationApiClient codeNationApiClient)
             throws IOException, InterruptedException {
-        this.criptografiaJulioCesarPayload = codeNationApiClient.recebeDesafio();
+        this.codeNationApiClient = codeNationApiClient;
+        this.criptografiaJulioCesarPayload = this.codeNationApiClient.recebeDesafio();
     }
 
     public static DesafioCriptografiaJulioCesar create(CodeNationApiClient codeNationApiClient)
@@ -61,5 +65,10 @@ public class DesafioCriptografiaJulioCesar {
         var hashSha1 = SHA1Util.genarateHash(criptografiaJulioCesarPayload.getDecifrado());
         criptografiaJulioCesarPayload.setResumoCriptografado(hashSha1);
         return hashSha1;
+    }
+
+    public String enviarDesafio() throws IOException, InterruptedException {
+        Path pathJson = Paths.get("json", "answer.json");
+        return this.codeNationApiClient.enviarDesafio(pathJson);
     }
 }
