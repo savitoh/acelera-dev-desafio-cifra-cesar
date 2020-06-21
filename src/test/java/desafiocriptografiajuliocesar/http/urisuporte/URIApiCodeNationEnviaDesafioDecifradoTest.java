@@ -12,11 +12,11 @@ public class URIApiCodeNationEnviaDesafioDecifradoTest {
 
     private static final String USER_CODENATION_TOKEN_PROPERTY_VALUE = "123456";
 
-    private URIApiCodeNationEnviaDesafioDecifrado uriEnviaTextoDecifrado;
+    private URIEnviaDesafioDecifradoApiCodeNation uriEnviaTextoDecifrado;
 
     @BeforeEach
     void setUp() {
-        uriEnviaTextoDecifrado = new URIApiCodeNationEnviaDesafioDecifrado();
+        uriEnviaTextoDecifrado = new URIEnviaDesafioDecifradoApiCodeNation();
         System.clearProperty(USER_CODENATION_TOKEN_PROPERTY_NAME);
     }
 

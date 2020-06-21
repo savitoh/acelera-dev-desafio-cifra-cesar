@@ -3,8 +3,8 @@ package desafiocriptografiajuliocesar.http;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import desafiocriptografiajuliocesar.http.payload.CriptografiaJulioCesarPayload;
 import desafiocriptografiajuliocesar.http.urisuporte.URIApiCodeNation;
-import desafiocriptografiajuliocesar.http.urisuporte.URIApiCodeNationEnviaDesafioDecifrado;
-import desafiocriptografiajuliocesar.http.urisuporte.URIApiCodeNationRecebeDesafio;
+import desafiocriptografiajuliocesar.http.urisuporte.URIEnviaDesafioDecifradoApiCodeNation;
+import desafiocriptografiajuliocesar.http.urisuporte.URIRecebeDesafioApiCodeNation;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -27,7 +27,7 @@ public class CodeNationApiClient {
     }
 
     public CriptografiaJulioCesarPayload recebeDesafio() throws IOException, InterruptedException {
-        uriApiCodeNation = new URIApiCodeNationRecebeDesafio();
+        uriApiCodeNation = new URIRecebeDesafioApiCodeNation();
         final String uriRecebeTextoCriptografado = uriApiCodeNation.getURI();
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -45,7 +45,7 @@ public class CodeNationApiClient {
         Map<String, Path> data = new LinkedHashMap();
         data.put("answer", path);
         final String boundary = new BigInteger(256, new Random()).toString();
-        uriApiCodeNation = new URIApiCodeNationEnviaDesafioDecifrado();
+        uriApiCodeNation = new URIEnviaDesafioDecifradoApiCodeNation();
 
         final String uriEnviaDesafio = uriApiCodeNation.getURI();
         HttpRequest request = HttpRequest.newBuilder()
